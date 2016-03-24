@@ -1,8 +1,6 @@
 Provides Common Postgres Types for Doctrine
 -------------------------------------------
 
-[![Build Status](https://secure.travis-ci.org/opensoft/doctrine-postgres-types.png?branch=master)](http://travis-ci.org/opensoft/doctrine-postgres-types)
-
 Provides Doctrine Type classes for common postgres types
 
 #### Using with Symfony2 Doctrine Configuration
@@ -17,6 +15,7 @@ Provides Doctrine Type classes for common postgres types
                 tsquery: "Doctrine\\DBAL\\PostgresTypes\\TsqueryType"
                 xml: "Doctrine\\DBAL\\PostgresTypes\\XmlType"
                 inet: "Doctrine\\DBAL\\PostgresTypes\\InetType"
+                ltree: "Doctrine\\DBAL\\PostgresTypes\\LtreeType"
             mapping_types:
                 _text: text_array
                 _int4: int_array
@@ -24,6 +23,7 @@ Provides Doctrine Type classes for common postgres types
                 tsquery: ts_query
                 xml: xml
                 inet: inet
+                ltree: ltree
 
 #### Using with Doctrine
 
@@ -37,6 +37,7 @@ Provides Doctrine Type classes for common postgres types
     Type::addType('tsquery', "Doctrine\\DBAL\\PostgresTypes\\TsqueryType");
     Type::addType('xml', "Doctrine\\DBAL\\PostgresTypes\\XmlType");
     Type::addType('inet', "Doctrine\\DBAL\\PostgresTypes\\InetType");
+    Type::addType('ltree', "Doctrine\\DBAL\\PostgresTypes\\LtreeType");
 
 #### License
 
